@@ -1,0 +1,18 @@
+{
+  "name": "srinivasu-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Srinivasu Pakkurthi — AI/ML Engineer & Software Engineer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo 'Static build ready'"
+  },
+  "keywords": [
+    "portfolio",
+    "ai-ml-engineer",
+    "developer",
+    "srinivasu-pakkurthi"
+  ],
+  "author": "Srinivasu Pakkurthi",
+  "license": "MIT"
+}

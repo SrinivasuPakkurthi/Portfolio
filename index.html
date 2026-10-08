@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Srinivasu Pakkurthi | AI/ML Engineer & Software Engineer</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Portfolio of Srinivasu Pakkurthi, AI/ML Engineering student pursuing B.Tech in CSE (AI & ML). Hands-on experience in Python, data analysis, machine learning workflows, and full-stack development.">
+  <meta name="keywords" content="Srinivasu Pakkurthi, AI/ML Engineer, Software Engineer, Portfolio, Machine Learning, Python, Data Analytics, Full Stack Developer, Ideal Institute of Technology">
+  <meta name="author" content="Srinivasu Pakkurthi">
+  <meta property="og:title" content="Srinivasu Pakkurthi | AI/ML Engineer & Software Engineer">
+  <meta property="og:description" content="AI/ML engineering student with hands-on experience in Python, data analysis, machine learning workflows, and full-stack development.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a0d14">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Custom Interactive Cursor Follower -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Background Particle & Gradient Canvas -->
+  <canvas id="neuralCanvas" class="neural-canvas" aria-hidden="true"></canvas>
+  <div class="background-grid" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Srinivasu Pakkurthi Home">
+        <span class="logo-symbol">&lt;SP /&gt;</span>
+        <span class="logo-name">Srinivasu Pakkurthi</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Theme Toggle, Resume Button, Mobile Toggle) -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Quick Resume Button in Header -->
+        <button class="btn btn-sm btn-outline resume-open-btn" aria-label="View Resume">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>Resume</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="mobile-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-content">
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <button class="btn btn-primary btn-block resume-open-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download Resume
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero-section">
+      <div class="hero-glow-blob blob-1" aria-hidden="true"></div>
+      <div class="hero-glow-blob blob-2" aria-hidden="true"></div>
+      
+      <div class="container hero-container">
+        <!-- Floating Live Data Elements / Badges in Background -->
+        <div class="floating-pills-container" aria-hidden="true">
+          <div class="floating-pill pill-1">
+            <span class="pill-dot"></span>
+            <code>model.evaluate(X_test, y_test)</code>
+          </div>
+          <div class="floating-pill pill-2">
+            <span class="pill-dot green"></span>
+            <code>loss: 0.0182 | acc: 94.6%</code>
+          </div>
+          <div class="floating-pill pill-3">
+            <span class="pill-dot purple"></span>
+            <code>pandas.DataFrame(analytics)</code>
+          </div>
+          <div class="floating-pill pill-4">
+            <span class="pill-dot cyan"></span>
+            <code>JWT Auth &bull; 256-bit Encrypted</code>
+          </div>
+        </div>
+
+        <div class="hero-grid">
+          <!-- Left: Hero Text & Actions -->
+          <div class="hero-content">
+            <div class="hero-badge reveal-elem">
+              <span class="status-indicator">
+                <span class="status-dot"></span>
+                <span class="status-pulse"></span>
+              </span>
+              <span>Aspiring AI/ML &amp; Software Engineer</span>
+            </div>
+
+            <h1 class="hero-name reveal-elem">
+              <span class="gradient-text">SRINIVASU PAKKURTHI</span>
+            </h1>
+
+            <h2 class="hero-role reveal-elem">
+              <span class="role-bracket">&lt;</span>
+              <span class="role-title">AI/ML Engineer | Software Engineer</span>
+              <span class="role-bracket">/&gt;</span>
+            </h2>
+
+            <p class="hero-intro reveal-elem">
+              AI/ML engineering student with hands-on experience in Python, data analysis, machine learning workflows, and full-stack development.
+            </p>
+
+            <!-- Call to Action Buttons -->
+            <div class="hero-cta reveal-elem">
+              <a href="#projects" class="btn btn-primary">
+                <span>View My Projects</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <button class="btn btn-secondary resume-open-btn" id="heroResumeBtn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download Resume</span>
+              </button>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero-socials reveal-elem">
+              <span class="social-label">Connect:</span>
+              <div class="social-links-list">
+                <!-- GitHub -->
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile" title="GitHub Profile">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn Profile">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </a>
+                <!-- Email -->
+                <a href="mailto:srinivasupakkurthi2@gmail.com" class="social-icon-btn" aria-label="Send Email" title="srinivasupakkurthi2@gmail.com">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Professional Portrait Card on Top Right -->
+          <div class="hero-visual reveal-elem">
+            <div class="portrait-card-wrapper">
+              <!-- Animated Glow Aura -->
+              <div class="portrait-glow" aria-hidden="true"></div>
+              
+              <!-- Floating Mini Badges -->
+              <div class="portrait-badge portrait-badge-top">
+                <span class="p-badge-dot"></span>
+                <span>CSE (AI &amp; ML)</span>
+              </div>
+              <div class="portrait-badge portrait-badge-bottom">
+                <span class="p-badge-icon">⚡</span>
+                <span>Python &bull; ML &bull; Full-Stack</span>
+              </div>
+
+              <!-- Main Framed Image -->
+              <div class="portrait-frame">
+                <img 
+                  src="assets/profile.jpg" 
+                  alt="Srinivasu Pakkurthi - AI/ML Engineer" 
+                  class="portrait-img"
+                  loading="eager"
+                  fetchpriority="high"
+                >
+                <div class="portrait-overlay" aria-hidden="true"></div>
+              </div>
+
+              <!-- Interactive Floating Code Accent -->
+              <div class="portrait-tech-pill" aria-hidden="true">
+                <code>&lt;ideal_inst_tech /&gt;</code>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Down Cue -->
+        <a href="#about" class="scroll-cue" aria-label="Scroll down to About section">
+          <span class="scroll-cue-text">Explore</span>
+          <div class="scroll-cue-mouse">
+            <div class="scroll-cue-wheel"></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ME SECTION ==================== -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle">Profile Overview</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Text Narrative Card -->
+          <div class="glass-card about-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="about-card-body">
+              <h3 class="about-heading">
+                Engineering intelligent systems with solid engineering foundations.
+              </h3>
+              <p class="about-paragraph">
+                I am Srinivasu Pakkurthi, an engineering student pursuing my <strong>B.Tech in Computer Science and Engineering (Artificial Intelligence &amp; Machine Learning)</strong>. My focus spans end-to-end AI/ML workflows, modern software development, and actionable data analytics.
+              </p>
+              <p class="about-paragraph">
+                Through immersive practical internships and comprehensive software projects, I have developed strong proficiencies in <strong>Python</strong>, <strong>data cleaning and preprocessing</strong>, <strong>exploratory data analysis</strong>, and <strong>supervised machine learning models</strong> alongside full-stack application development.
+              </p>
+              <p class="about-paragraph">
+                I am deeply interested in building scalable AI/ML solutions, modern software architectures, and data-driven tools that solve concrete real-world challenges.
+              </p>
+
+              <!-- Highlights Badges -->
+              <div class="about-tags-row">
+                <span class="tag-badge"><span class="tag-dot"></span> B.Tech CSE (AI &amp; ML)</span>
+                <span class="tag-badge"><span class="tag-dot"></span> Practical Internships</span>
+                <span class="tag-badge"><span class="tag-dot"></span> AI &amp; Machine Learning</span>
+                <span class="tag-badge"><span class="tag-dot"></span> Software Development</span>
+                <span class="tag-badge"><span class="tag-dot"></span> Data Analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Animated Statistics Grid -->
+          <div class="stats-container reveal-elem">
+            <!-- Stat 1: 8.2 CGPA -->
+            <div class="glass-card stat-card" data-stat="8.2" data-type="decimal">
+              <div class="stat-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div class="stat-content">
+                <div class="stat-number-row">
+                  <span class="stat-value" data-target="8.2">0.0</span>
+                  <span class="stat-unit">/ 10</span>
+                </div>
+                <div class="stat-label">Academic CGPA</div>
+                <p class="stat-subtext">Consistent high performance in CSE (AI &amp; ML)</p>
+              </div>
+            </div>
+
+            <!-- Stat 2: 3 Internships -->
+            <div class="glass-card stat-card" data-stat="3" data-type="integer">
+              <div class="stat-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <div class="stat-content">
+                <div class="stat-number-row">
+                  <span class="stat-value" data-target="3">0</span>
+                  <span class="stat-unit">+</span>
+                </div>
+                <div class="stat-label">Internships</div>
+                <p class="stat-subtext">Hands-on industry &amp; virtual experience</p>
+              </div>
+            </div>
+
+            <!-- Stat 3: 2 Major Projects -->
+            <div class="glass-card stat-card" data-stat="2" data-type="integer">
+              <div class="stat-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <div class="stat-content">
+                <div class="stat-number-row">
+                  <span class="stat-value" data-target="2">0</span>
+                  <span class="stat-unit">Core</span>
+                </div>
+                <div class="stat-label">Major Projects</div>
+                <p class="stat-subtext">Customer Analytics &amp; AI Nutrition Assistant</p>
+              </div>
+            </div>
+
+            <!-- Stat 4: 2027 Graduation -->
+            <div class="glass-card stat-card" data-stat="2027" data-type="integer">
+              <div class="stat-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <div class="stat-content">
+                <div class="stat-number-row">
+                  <span class="stat-value" data-target="2027">2020</span>
+                </div>
+                <div class="stat-label">Graduation Year</div>
+                <p class="stat-subtext">Ideal Institute of Technology, Kakinada</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION TIMELINE ==================== -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle">Academic Journey</span>
+          <h2 class="section-title">Education Timeline</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-track" aria-hidden="true">
+            <div class="timeline-progress-bar" id="timelineProgressBar"></div>
+          </div>
+
+          <div class="timeline-items">
+            <!-- Timeline Item 1: B.Tech -->
+            <div class="timeline-item reveal-elem" data-index="1">
+              <div class="timeline-node" aria-hidden="true">
+                <div class="node-inner"></div>
+                <div class="node-pulse"></div>
+              </div>
+              <div class="glass-card timeline-card">
+                <div class="card-glow" aria-hidden="true"></div>
+                <div class="timeline-header-row">
+                  <div class="timeline-badge current">Current &bull; 2023–2027</div>
+                  <div class="timeline-score-badge">
+                    <span class="score-label">CGPA</span>
+                    <span class="score-val">8.2 / 10</span>
+                  </div>
+                </div>
+                <h3 class="timeline-title">B.Tech, CSE (AI &amp; ML)</h3>
+                <h4 class="timeline-institution">Ideal Institute of Technology</h4>
+                <div class="timeline-meta">
+                  <span class="meta-item">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Kakinada, Andhra Pradesh
+                  </span>
+                  <span class="meta-item">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    2023 – 2027
+                  </span>
+                </div>
+                <p class="timeline-desc">
+                  Specialized undergraduate program focusing on Artificial Intelligence, Machine Learning algorithms, Data Structures, Python, Full-Stack Engineering, and applied data analytics.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2: MPC -->
+            <div class="timeline-item reveal-elem" data-index="2">
+              <div class="timeline-node" aria-hidden="true">
+                <div class="node-inner"></div>
+              </div>
+              <div class="glass-card timeline-card">
+                <div class="card-glow" aria-hidden="true"></div>
+                <div class="timeline-header-row">
+                  <div class="timeline-badge">2021–2023</div>
+                  <div class="timeline-score-badge">
+                    <span class="score-label">Score</span>
+                    <span class="score-val">8 / 10</span>
+                  </div>
+                </div>
+                <h3 class="timeline-title">MPC (Mathematics, Physics, Chemistry)</h3>
+                <h4 class="timeline-institution">Pragati Junior College</h4>
+                <div class="timeline-meta">
+                  <span class="meta-item">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Kakinada, Andhra Pradesh
+                  </span>
+                  <span class="meta-item">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    2021 – 2023
+                  </span>
+                </div>
+                <p class="timeline-desc">
+                  Rigorous foundational coursework in Higher Mathematics, Analytical Calculus, and Physical Sciences, building core quantitative and analytical reasoning skills.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 3: 10th Class SSC -->
+            <div class="timeline-item reveal-elem" data-index="3">
+              <div class="timeline-node" aria-hidden="true">
+                <div class="node-inner"></div>
+              </div>
+              <div class="glass-card timeline-card">
+                <div class="card-glow" aria-hidden="true"></div>
+                <div class="timeline-header-row">
+                  <div class="timeline-badge">Secondary Education</div>
+                  <div class="timeline-score-badge">
+                    <span class="score-label">Percentage</span>
+                    <span class="score-val">88%</span>
+                  </div>
+                </div>
+                <h3 class="timeline-title">10th Class (SSC)</h3>
+                <h4 class="timeline-institution">Municipal Corporation High School</h4>
+                <div class="timeline-meta">
+                  <span class="meta-item">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Kakinada, Andhra Pradesh
+                  </span>
+                </div>
+                <p class="timeline-desc">
+                  Completed secondary schooling with academic distinction, establishing strong fundamentals across mathematics, general science, and communication.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE SECTION ==================== -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle">Work &amp; Internships</span>
+          <h2 class="section-title">Professional Experience</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="experience-grid">
+          <!-- Experience 1: Krify Software Technologies -->
+          <div class="glass-card experience-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="exp-header">
+              <div class="exp-type-badge on-site">
+                <span class="badge-dot"></span> On-site Internship
+              </div>
+              <div class="exp-period">May 2026 – Jul 2026</div>
+            </div>
+            
+            <h3 class="exp-role">AI Software Trainee Intern</h3>
+            <h4 class="exp-company">Krify Software Technologies Pvt. Ltd.</h4>
+            <div class="exp-location">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>On-site Trainee</span>
+            </div>
+
+            <div class="exp-highlights-box">
+              <div class="highlights-title">Key Contributions &amp; Highlights:</div>
+              <ul class="exp-list">
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Customer Behaviour Analysis:</strong> Studied user activity trends and behavioral patterns.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Data Cleaning &amp; Preprocessing:</strong> Handled missing values, outliers, normalization, and feature transformation.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Python, Pandas &amp; NumPy:</strong> Built automated data pipelines for structured analytical data processing.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Exploratory Data Analysis (EDA):</strong> Discovered key correlation patterns and distribution profiles.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Matplotlib &amp; Seaborn:</strong> Developed visual reporting charts and correlation heatmaps.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Customer Segmentation Insights:</strong> Extracted actionable customer cluster profiles for business teams.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="exp-tech-tags">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Pandas</span>
+              <span class="tech-pill">NumPy</span>
+              <span class="tech-pill">EDA</span>
+              <span class="tech-pill">Matplotlib</span>
+              <span class="tech-pill">Seaborn</span>
+              <span class="tech-pill">Customer Segmentation</span>
+            </div>
+          </div>
+
+          <!-- Experience 2: Google AI-ML Virtual Internship -->
+          <div class="glass-card experience-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="exp-header">
+              <div class="exp-type-badge online">
+                <span class="badge-dot"></span> Virtual Internship
+              </div>
+              <div class="exp-period">Jun 2025 – Jul 2025</div>
+            </div>
+
+            <h3 class="exp-role">AI/ML Intern</h3>
+            <h4 class="exp-company">Google AI-ML Virtual Internship</h4>
+            <div class="exp-location">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span>Online Learning &amp; Labs</span>
+            </div>
+
+            <div class="exp-highlights-box">
+              <div class="highlights-title">Key Contributions &amp; Highlights:</div>
+              <ul class="exp-list">
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Supervised Learning:</strong> Implemented and tuned classification and regression algorithms.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Model Evaluation:</strong> Assessed performance with accuracy, precision, recall, F1-scores, and confusion matrices.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Hands-on AI/ML Exercises:</strong> Executed end-to-end practical machine learning laboratory pipelines.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="exp-tech-tags">
+              <span class="tech-pill">Supervised Learning</span>
+              <span class="tech-pill">Model Evaluation</span>
+              <span class="tech-pill">Machine Learning</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">AI Workflows</span>
+            </div>
+          </div>
+
+          <!-- Experience 3: EduSkills Academy (AICTE) -->
+          <div class="glass-card experience-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="exp-header">
+              <div class="exp-type-badge online">
+                <span class="badge-dot"></span> Virtual Internship
+              </div>
+              <div class="exp-period">Oct 2024 – Dec 2024</div>
+            </div>
+
+            <h3 class="exp-role">Java Full Stack Developer Virtual Intern</h3>
+            <h4 class="exp-company">EduSkills Academy (AICTE)</h4>
+            <div class="exp-location">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span>10-Week Virtual Program</span>
+            </div>
+
+            <div class="exp-highlights-box">
+              <div class="highlights-title">Key Contributions &amp; Highlights:</div>
+              <ul class="exp-list">
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>10-Week Virtual Internship:</strong> Rigorous structured curriculum supported by AICTE and EduSkills.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Frontend Development:</strong> Built interactive user interfaces using modern web fundamentals.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Backend Development:</strong> Architected server-side logic and modular application components.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Database Integration:</strong> Connected SQL relational databases to Java backend systems.</span>
+                </li>
+                <li>
+                  <svg class="check-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Java Full-Stack Fundamentals:</strong> Mastered OOP design patterns and multi-tier architectures.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="exp-tech-tags">
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">Frontend</span>
+              <span class="tech-pill">Backend</span>
+              <span class="tech-pill">SQL</span>
+              <span class="tech-pill">Database Integration</span>
+              <span class="tech-pill">Full Stack</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURED PROJECTS SECTION ==================== -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle">Portfolio Showcase</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="title-underline"></div>
+          <p class="section-desc">
+            Explore major engineering systems highlighting machine learning pipelines, data visualization, and full-stack development.
+          </p>
+        </div>
+
+        <div class="projects-container">
+          <!-- PROJECT 1: Customer Behaviour Analytics -->
+          <article class="glass-card project-card reveal-elem" id="project-analytics">
+            <div class="card-glow" aria-hidden="true"></div>
+            
+            <div class="project-layout">
+              <!-- Left / Top: Info & Description -->
+              <div class="project-info">
+                <div class="project-num-badge">Project 01 &bull; AI / Data Analytics</div>
+                <h3 class="project-title">Customer Behaviour Analytics</h3>
+                <p class="project-quote">
+                  &ldquo;An interactive customer analytics platform combining segmentation, churn prediction, revenue analysis, and behavioural insights.&rdquo;
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="badge tech-badge">Python</span>
+                  <span class="badge tech-badge">Streamlit</span>
+                  <span class="badge tech-badge">Pandas</span>
+                  <span class="badge tech-badge">Scikit-learn</span>
+                  <span class="badge tech-badge">Plotly</span>
+                  <span class="badge tech-badge">SQLite</span>
+                </div>
+
+                <div class="project-features-block">
+                  <h4 class="features-heading">Core Architectural Features:</h4>
+                  <div class="features-grid">
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>Customer segmentation</strong> (K-Means Clustering)</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>Churn prediction</strong> (Classification models)</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>Revenue analysis</strong> (Cohort tracking)</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>Behavioural insights</strong> (Action patterns)</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>Interactive dashboards</strong> (Streamlit UI)</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>KPI reports</strong> (Executive summaries)</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>Machine learning models</strong> (Scikit-learn)</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>Customer engagement analysis</strong> (Metrics)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>View on GitHub</span>
+                  </a>
+                  <button class="btn btn-outline btn-sm test-model-btn" data-target="analytics-interactive">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    <span>Interactive ML Simulator</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right / Bottom: Live Dashboard Simulation -->
+              <div class="project-visual">
+                <div class="dashboard-mockup">
+                  <!-- Mockup Top Bar -->
+                  <div class="mockup-header">
+                    <div class="mockup-dots">
+                      <span class="dot red"></span>
+                      <span class="dot yellow"></span>
+                      <span class="dot green"></span>
+                    </div>
+                    <div class="mockup-title">Streamlit Analytics Engine &bull; Customer Insights</div>
+                    <div class="mockup-status">LIVE METRICS</div>
+                  </div>
+
+                  <!-- Mockup Content: Metrics Row -->
+                  <div class="mockup-body">
+                    <div class="mockup-kpis">
+                      <div class="kpi-mini-card">
+                        <span class="kpi-label">Active Segments</span>
+                        <span class="kpi-val text-cyan">4 Clusters</span>
+                        <span class="kpi-trend">&uarr; K-Means Validated</span>
+                      </div>
+                      <div class="kpi-mini-card">
+                        <span class="kpi-label">Retention Rate</span>
+                        <span class="kpi-val text-green">87.4%</span>
+                        <span class="kpi-trend">&uarr; +3.2% Churn Red.</span>
+                      </div>
+                      <div class="kpi-mini-card">
+                        <span class="kpi-label">Database Store</span>
+                        <span class="kpi-val text-purple">SQLite</span>
+                        <span class="kpi-trend">Relational Schema</span>
+                      </div>
+                    </div>
+
+                    <!-- Interactive Cluster & Churn Simulation Canvas -->
+                    <div class="mockup-chart-area">
+                      <div class="chart-header-row">
+                        <span class="chart-caption">Customer Segmentation &amp; Churn Risk Map (Plotly Simulation)</span>
+                        <button class="chart-reseed-btn" id="reseedClusterBtn" title="Regenerate dynamic customer points">
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                          </svg>
+                          Re-simulate
+                        </button>
+                      </div>
+                      <div class="chart-canvas-container">
+                        <canvas id="clusterCanvas" width="480" height="190" aria-label="Customer Segmentation Scatter Plot"></canvas>
+                      </div>
+                    </div>
+
+                    <!-- Interactive Mini Churn Risk Estimator -->
+                    <div class="interactive-simulator-box" id="analytics-interactive">
+                      <div class="simulator-title">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <line x1="4" y1="21" x2="4" y2="14"></line>
+                          <line x1="4" y1="10" x2="4" y2="3"></line>
+                          <line x1="12" y1="21" x2="12" y2="12"></line>
+                          <line x1="12" y1="8" x2="12" y2="3"></line>
+                          <line x1="20" y1="21" x2="20" y2="16"></line>
+                          <line x1="20" y1="12" x2="20" y2="3"></line>
+                        </svg>
+                        <span>Live Scikit-learn Churn Risk Estimator</span>
+                      </div>
+                      <div class="simulator-controls">
+                        <div class="control-group">
+                          <label for="tenureSlider">Account Tenure (Months): <span id="tenureVal" class="slider-val">14</span></label>
+                          <input type="range" id="tenureSlider" min="1" max="48" value="14" class="range-slider">
+                        </div>
+                        <div class="control-group">
+                          <label for="engagementSlider">Monthly Engagement: <span id="engagementVal" class="slider-val">72</span>%</label>
+                          <input type="range" id="engagementSlider" min="5" max="100" value="72" class="range-slider">
+                        </div>
+                      </div>
+                      <div class="simulator-output">
+                        <div class="output-gauge">
+                          <span class="gauge-label">Predicted Churn Probability:</span>
+                          <span id="churnRiskVal" class="gauge-value low-risk">12.5% (Low Risk)</span>
+                        </div>
+                        <div class="gauge-bar-track">
+                          <div id="churnRiskBar" class="gauge-bar-fill" style="width: 12.5%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: AI Nutrition Assistant -->
+          <article class="glass-card project-card reveal-elem" id="project-nutrition">
+            <div class="card-glow" aria-hidden="true"></div>
+
+            <div class="project-layout">
+              <!-- Left / Top: Info & Description -->
+              <div class="project-info">
+                <div class="project-num-badge">Project 02 &bull; MERN Stack + Generative AI</div>
+                <h3 class="project-title">AI Nutrition Assistant</h3>
+                <p class="project-quote">
+                  &ldquo;An AI-powered full-stack nutrition tracking application with authentication, meal planning, health calculations, progress tracking, and an AI nutrition chatbot.&rdquo;
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="badge tech-badge">React (Frontend)</span>
+                  <span class="badge tech-badge">Node.js</span>
+                  <span class="badge tech-badge">Express</span>
+                  <span class="badge tech-badge">MongoDB</span>
+                  <span class="badge tech-badge">OpenAI API</span>
+                  <span class="badge tech-badge">JWT &amp; Bcrypt</span>
+                </div>
+
+                <div class="project-features-block">
+                  <h4 class="features-heading">Full-Stack &amp; AI Capabilities:</h4>
+                  <div class="features-grid">
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>React frontend</strong> with interactive UI</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>Node.js &amp; Express backend</strong> API architecture</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>MongoDB</strong> document database storage</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>JWT authentication</strong> &amp; secure session tokens</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>Role-based access</strong> control</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>Bcrypt password hashing</strong> security</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>Food database</strong> with nutritional metadata</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>Meal planning</strong> &amp; dietary scheduling</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>BMI &amp; calorie calculations</strong> algorithms</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>Progress tracking</strong> with visual targets</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>AI nutrition chatbot</strong> (OpenAI API integration)</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="f-icon">&bull;</span>
+                      <span><strong>AI chat history</strong> persistence</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>View on GitHub</span>
+                  </a>
+                  <button class="btn btn-outline btn-sm test-model-btn" data-target="nutrition-chat-interactive">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>Test AI Chatbot</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right / Bottom: Live Health Dashboard & AI Chat Preview -->
+              <div class="project-visual">
+                <div class="dashboard-mockup nutrition-dashboard">
+                  <!-- Mockup Top Bar -->
+                  <div class="mockup-header">
+                    <div class="mockup-dots">
+                      <span class="dot red"></span>
+                      <span class="dot yellow"></span>
+                      <span class="dot green"></span>
+                    </div>
+                    <div class="mockup-title">AI Nutrition &amp; Health Dashboard &bull; MERN + OpenAI</div>
+                    <div class="mockup-status health-pulse">SECURE JWT</div>
+                  </div>
+
+                  <!-- Mockup Content: Health Metrics & Interactive AI Chatbot -->
+                  <div class="mockup-body">
+                    <!-- Health Metrics Bar -->
+                    <div class="nutrition-kpis">
+                      <div class="kpi-mini-card">
+                        <span class="kpi-label">Target Calories</span>
+                        <span class="kpi-val text-green">2,150 kcal</span>
+                        <div class="kpi-progress-bar"><div class="fill" style="width: 78%;"></div></div>
+                      </div>
+                      <div class="kpi-mini-card">
+                        <span class="kpi-label">Protein Target</span>
+                        <span class="kpi-val text-cyan">140g / 150g</span>
+                        <div class="kpi-progress-bar"><div class="fill" style="width: 93%;"></div></div>
+                      </div>
+                      <div class="kpi-mini-card">
+                        <span class="kpi-label">BMI Calculation</span>
+                        <span class="kpi-val text-purple">22.4 (Normal)</span>
+                        <span class="kpi-trend">Optimized Index</span>
+                      </div>
+                    </div>
+
+                    <!-- Interactive AI Chatbot Simulation -->
+                    <div class="nutrition-chat-box" id="nutrition-chat-interactive">
+                      <div class="chat-header">
+                        <div class="bot-avatar">
+                          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path>
+                            <rect x="4" y="8" width="16" height="12" rx="2"></rect>
+                            <circle cx="9" cy="13" r="1"></circle>
+                            <circle cx="15" cy="13" r="1"></circle>
+                          </svg>
+                        </div>
+                        <div class="bot-status-info">
+                          <span class="bot-title">OpenAI Nutrition Assistant</span>
+                          <span class="bot-sub">Online &bull; Context Memory Active</span>
+                        </div>
+                        <span class="ai-badge">GPT-Powered</span>
+                      </div>
+
+                      <!-- Chat Messages Scroll Area -->
+                      <div class="chat-messages-area" id="chatMessagesArea">
+                        <div class="chat-msg bot-msg">
+                          <div class="msg-bubble">
+                            Hello! I am your AI Nutrition Assistant. Ask me to calculate meal macros, suggest high-protein options, or review daily calorie targets.
+                          </div>
+                          <span class="msg-time">Just now</span>
+                        </div>
+                      </div>
+
+                      <!-- Quick Prompts Buttons -->
+                      <div class="chat-quick-prompts">
+                        <button class="quick-chip" data-prompt="Suggest a 500 kcal high-protein breakfast.">
+                          🍳 500 kcal high-protein
+                        </button>
+                        <button class="quick-chip" data-prompt="How do I calculate BMI and daily maintenance calories?">
+                          ⚖️ Calculate BMI &amp; Calories
+                        </button>
+                        <button class="quick-chip" data-prompt="What foods help muscle recovery post-workout?">
+                          💪 Recovery meal ideas
+                        </button>
+                      </div>
+
+                      <!-- Chat Input -->
+                      <form class="chat-input-row" id="nutritionChatForm">
+                        <input type="text" id="nutritionUserInput" placeholder="Ask about meal planning, calories, BMI..." autocomplete="off">
+                        <button type="submit" class="chat-send-btn" aria-label="Send message">
+                          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                          </svg>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle">Technical Competencies</span>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+          <div class="title-underline"></div>
+          <p class="section-desc">
+            Categorized technical abilities, data science toolkits, and software development proficiencies.
+          </p>
+        </div>
+
+        <div class="skills-categories-grid">
+          <!-- Category 1: Programming Languages -->
+          <div class="glass-card skill-category-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="cat-header">
+              <div class="cat-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="cat-title">Programming Languages</h3>
+            </div>
+            
+            <div class="skills-list">
+              <!-- Python -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-logo">🐍</span>
+                    <span class="skill-name">Python</span>
+                  </div>
+                  <span class="skill-level">Core Proficiency</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+              </div>
+
+              <!-- Java -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-logo">☕</span>
+                    <span class="skill-name">Java</span>
+                  </div>
+                  <span class="skill-level">Full Stack Fundamentals</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+              </div>
+
+              <!-- SQL -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-logo">🗄️</span>
+                    <span class="skill-name">SQL</span>
+                  </div>
+                  <span class="skill-level">Queries &amp; Databases</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 82%;"></div></div>
+              </div>
+
+              <!-- C -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-logo">⚡</span>
+                    <span class="skill-name">C</span>
+                  </div>
+                  <span class="skill-level">Structured Foundations</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 78%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: AI / Data -->
+          <div class="glass-card skill-category-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="cat-header">
+              <div class="cat-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+              </div>
+              <h3 class="cat-title">AI / Data</h3>
+            </div>
+
+            <div class="skills-pill-grid">
+              <div class="skill-chip">
+                <span class="chip-dot"></span>
+                <span class="chip-text">Machine Learning</span>
+              </div>
+              <div class="skill-chip">
+                <span class="chip-dot"></span>
+                <span class="chip-text">Data Preprocessing</span>
+              </div>
+              <div class="skill-chip">
+                <span class="chip-dot"></span>
+                <span class="chip-text">EDA (Exploratory Data Analysis)</span>
+              </div>
+              <div class="skill-chip">
+                <span class="chip-dot"></span>
+                <span class="chip-text">Pandas</span>
+              </div>
+              <div class="skill-chip">
+                <span class="chip-dot"></span>
+                <span class="chip-text">NumPy</span>
+              </div>
+              <div class="skill-chip">
+                <span class="chip-dot"></span>
+                <span class="chip-text">Scikit-learn</span>
+              </div>
+              <div class="skill-chip">
+                <span class="chip-dot"></span>
+                <span class="chip-text">Data Visualization</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Web Technologies -->
+          <div class="glass-card skill-category-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="cat-header">
+              <div class="cat-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <h3 class="cat-title">Web Technologies</h3>
+            </div>
+
+            <div class="skills-list">
+              <!-- HTML -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-logo">🌐</span>
+                    <span class="skill-name">HTML</span>
+                  </div>
+                  <span class="skill-level">Semantic Structure</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+              </div>
+
+              <!-- CSS -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-logo">🎨</span>
+                    <span class="skill-name">CSS</span>
+                  </div>
+                  <span class="skill-level">Responsive Layouts</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 82%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Tools -->
+          <div class="glass-card skill-category-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="cat-header">
+              <div class="cat-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <h3 class="cat-title">Tools &amp; Platforms</h3>
+            </div>
+
+            <div class="tools-grid">
+              <div class="tool-badge-card">
+                <div class="tool-icon">💻</div>
+                <span class="tool-name">VS Code</span>
+                <span class="tool-role">Primary IDE</span>
+              </div>
+              <div class="tool-badge-card">
+                <div class="tool-icon">📊</div>
+                <span class="tool-name">Streamlit</span>
+                <span class="tool-role">Data Web Apps</span>
+              </div>
+              <div class="tool-badge-card">
+                <div class="tool-icon">📈</div>
+                <span class="tool-name">Plotly</span>
+                <span class="tool-role">Interactive Charts</span>
+              </div>
+              <div class="tool-badge-card">
+                <div class="tool-icon">💾</div>
+                <span class="tool-name">SQLite</span>
+                <span class="tool-role">Embedded Database</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5: Soft Skills -->
+          <div class="glass-card skill-category-card full-width-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="cat-header">
+              <div class="cat-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 class="cat-title">Professional &amp; Soft Skills</h3>
+            </div>
+
+            <div class="soft-skills-grid">
+              <div class="soft-skill-box">
+                <div class="soft-icon-circle">🧩</div>
+                <div class="soft-info">
+                  <h4 class="soft-name">Problem Solving</h4>
+                  <p class="soft-desc">Structured analytical approach to diagnosing software bugs, optimizing data pipelines, and modeling algorithmic solutions.</p>
+                </div>
+              </div>
+              <div class="soft-skill-box">
+                <div class="soft-icon-circle">🤝</div>
+                <div class="soft-info">
+                  <h4 class="soft-name">Team Collaboration</h4>
+                  <p class="soft-desc">Effective communication across technical cohorts, participating in team hackathons, code reviews, and cross-functional project execution.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CERTIFICATIONS SECTION ==================== -->
+    <section id="certifications" class="section certifications-section">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle">Verified Credentials</span>
+          <h2 class="section-title">Certifications</h2>
+          <div class="title-underline"></div>
+          <p class="section-desc">
+            Professional certifications and training programs completed in AI, Cloud, and Software Engineering.
+          </p>
+        </div>
+
+        <div class="certifications-grid">
+          <!-- Cert 1: IBM SkillsBuild -->
+          <div class="glass-card cert-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="cert-icon-badge ibm">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 16v-4"></path>
+                <path d="M12 8h.01"></path>
+              </svg>
+            </div>
+            <div class="cert-issuer">IBM SkillsBuild</div>
+            <h3 class="cert-name">AI Literacy</h3>
+            <p class="cert-desc">Core artificial intelligence foundations, ethical AI principles, and machine learning conceptual frameworks.</p>
+            <div class="cert-footer">
+              <span class="cert-status-tag">Verified Certificate</span>
+            </div>
+          </div>
+
+          <!-- Cert 2: Cisco -->
+          <div class="glass-card cert-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="cert-icon-badge cisco">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="cert-issuer">Cisco</div>
+            <h3 class="cert-name">Introduction to Modern AI</h3>
+            <p class="cert-desc">Modern artificial intelligence workflows, data paradigms, neural network overviews, and contemporary AI technologies.</p>
+            <div class="cert-footer">
+              <span class="cert-status-tag">Verified Certificate</span>
+            </div>
+          </div>
+
+          <!-- Cert 3: Red Hat OpenShift -->
+          <div class="glass-card cert-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="cert-icon-badge redhat">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              </svg>
+            </div>
+            <div class="cert-issuer">Red Hat</div>
+            <h3 class="cert-name">Red Hat OpenShift Applications (DO101-RHA)</h3>
+            <p class="cert-desc">Container orchestration, modern cloud application lifecycle management, and Red Hat OpenShift enterprise workflows.</p>
+            <div class="cert-footer">
+              <span class="cert-status-tag">DO101-RHA Certified</span>
+            </div>
+          </div>
+
+          <!-- Cert 4: Python Full Stack Internship -->
+          <div class="glass-card cert-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="cert-icon-badge python">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <div class="cert-issuer">Internship Program</div>
+            <h3 class="cert-name">Python Full Stack Internship Certificate</h3>
+            <p class="cert-desc">Comprehensive training in Python programming, web architecture, backend integration, and full stack application deployment.</p>
+            <div class="cert-footer">
+              <span class="cert-status-tag">Completed Program</span>
+            </div>
+          </div>
+
+          <!-- Cert 5: SmartBridge & APSCHE -->
+          <div class="glass-card cert-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="cert-icon-badge smartbridge">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <div class="cert-issuer">SmartBridge &amp; APSCHE</div>
+            <h3 class="cert-name">AI &amp; ML Internship Certificate</h3>
+            <p class="cert-desc">Government &amp; industry-accredited program in artificial intelligence and machine learning engineering methodologies.</p>
+            <div class="cert-footer">
+              <span class="cert-status-tag">State-Accredited</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ACHIEVEMENTS & ACTIVITIES ==================== -->
+    <section id="achievements" class="section achievements-section">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle">Beyond The Classroom</span>
+          <h2 class="section-title">Achievements &amp; Activities</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- Item 1: Robo Race -->
+          <div class="glass-card achievement-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="achieve-icon-circle">
+              🤖
+            </div>
+            <h3 class="achieve-title">Robo Race Competitions</h3>
+            <div class="achieve-venue">JNTUK &amp; Technical Symposia</div>
+            <p class="achieve-desc">
+              Participated in high-stakes <strong>Robo Race competitions at JNTUK</strong> and various inter-collegiate technical competitions, testing hardware-software integration, real-time control, and rapid debugging under competitive conditions.
+            </p>
+            <div class="achieve-tag-badge">Technical Competition</div>
+          </div>
+
+          <!-- Item 2: Hackathons -->
+          <div class="glass-card achievement-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="achieve-icon-circle">
+              ⚡
+            </div>
+            <h3 class="achieve-title">Hackathons</h3>
+            <div class="achieve-venue">Innovation &amp; Problem-Solving</div>
+            <p class="achieve-desc">
+              Active participant in competitive <strong>hackathons focused on innovation and problem-solving</strong>, collaborating under tight deadlines to formulate practical technical architectures and implement functional prototypes.
+            </p>
+            <div class="achieve-tag-badge">Innovation &amp; Prototyping</div>
+          </div>
+
+          <!-- Item 3: Chess -->
+          <div class="glass-card achievement-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="achieve-icon-circle">
+              ♟️
+            </div>
+            <h3 class="achieve-title">Chess Competitions</h3>
+            <div class="achieve-venue">Strategic &amp; Technical Tournaments</div>
+            <p class="achieve-desc">
+              Competitor in <strong>chess and technical/strategic competitions</strong>, cultivating keen tactical foresight, pattern recognition, patience, and rigorous analytical decision-making that directly enhances algorithmic problem-solving.
+            </p>
+            <div class="achieve-tag-badge">Strategic Analysis</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header reveal-elem">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 class="section-title">Let&rsquo;s Connect</h2>
+          <div class="title-underline"></div>
+          <p class="section-desc">
+            Open for internships, entry-level AI/ML and software engineering opportunities, collaborative projects, or professional networking.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Left: Contact Details Card -->
+          <div class="glass-card contact-info-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+
+            <div class="contact-profile-header">
+              <div class="profile-avatar-box">
+                <img src="assets/profile.jpg" alt="Srinivasu Pakkurthi" class="profile-avatar-img">
+              </div>
+              <div class="profile-text">
+                <h3 class="contact-name">Srinivasu Pakkurthi</h3>
+                <p class="contact-role">AI/ML Engineer | Software Engineer</p>
+              </div>
+            </div>
+
+            <div class="contact-details-list">
+              <!-- Location -->
+              <div class="contact-detail-item">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="detail-body">
+                  <span class="detail-label">Location</span>
+                  <span class="detail-value">Kakinada, Andhra Pradesh, India</span>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="contact-detail-item">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="detail-body">
+                  <span class="detail-label">Email</span>
+                  <a href="mailto:srinivasupakkurthi2@gmail.com" class="detail-value link" id="emailText">srinivasupakkurthi2@gmail.com</a>
+                </div>
+                <button class="copy-btn" id="copyEmailBtn" title="Copy email address" aria-label="Copy email">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Phone -->
+              <div class="contact-detail-item">
+                <div class="detail-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="detail-body">
+                  <span class="detail-label">Phone</span>
+                  <a href="tel:+917095264218" class="detail-value link">+91-70952 64218</a>
+                </div>
+                <button class="copy-btn" id="copyPhoneBtn" title="Copy phone number" aria-label="Copy phone number">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Action Buttons Grid -->
+            <div class="contact-btn-group">
+              <a href="mailto:srinivasupakkurthi2@gmail.com" class="btn btn-primary btn-block">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Email Me</span>
+              </a>
+
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>GitHub</span>
+              </a>
+
+              <button class="btn btn-outline btn-block resume-open-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download Resume</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Quick Message Box -->
+          <div class="glass-card contact-form-card reveal-elem">
+            <div class="card-glow" aria-hidden="true"></div>
+            <h3 class="form-title">Send a Direct Message</h3>
+            <p class="form-desc">
+              Whether you have an internship opportunity, placement query, or project discussion, feel free to drop a message.
+            </p>
+
+            <form id="contactForm" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName">Your Name</label>
+                  <input type="text" id="contactName" required placeholder="e.g. Recruiters / Team" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail">Your Email</label>
+                  <input type="email" id="contactEmail" required placeholder="e.g. name@company.com" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject">Subject</label>
+                <input type="text" id="contactSubject" required placeholder="e.g. AI/ML Engineering Opportunity" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" rows="5" required placeholder="Hello Srinivasu, we came across your portfolio and would love to discuss..." class="form-control"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="contactSubmitBtn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <p class="footer-credit">
+          Designed &amp; Built by <strong>Srinivasu Pakkurthi</strong>
+        </p>
+        <p class="footer-subcredit">
+          AI/ML Engineering Student &bull; Ideal Institute of Technology &bull; Kakinada, India
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <!-- Footer Social Icons -->
+        <div class="footer-socials">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="mailto:srinivasupakkurthi2@gmail.com" class="footer-icon-link" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Back to Top Button -->
+        <a href="#home" class="back-to-top-btn" aria-label="Back to top">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== RESUME VIEWER & DOWNLOAD MODAL ==================== -->
+  <div class="resume-modal-overlay" id="resumeModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+    <div class="resume-modal-container">
+      <div class="resume-modal-header">
+        <div class="resume-header-title">
+          <h3 id="resumeModalTitle">Curriculum Vitae &bull; Srinivasu Pakkurthi</h3>
+          <span class="resume-status-badge">AI/ML &amp; Software Engineering</span>
+        </div>
+        <div class="resume-header-actions">
+          <button class="btn btn-primary btn-sm" id="printResumeBtn" title="Print or save as PDF">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span>Print / Save PDF</span>
+          </button>
+          <button class="modal-close-btn" id="closeResumeModalBtn" aria-label="Close modal">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Printable Resume Body -->
+      <div class="resume-modal-body" id="printableResumeArea">
+        <!-- Resume Header -->
+        <div class="cv-header">
+          <h1 class="cv-name">SRINIVASU PAKKURTHI</h1>
+          <div class="cv-subname">AI/ML Engineer | Software Engineer</div>
+          <div class="cv-contact-row">
+            <span>📍 Kakinada, Andhra Pradesh, India</span>
+            <span>✉️ srinivasupakkurthi2@gmail.com</span>
+            <span>📞 +91-70952 64218</span>
+          </div>
+        </div>
+
+        <div class="cv-divider"></div>
+
+        <!-- Professional Summary -->
+        <div class="cv-section">
+          <h2 class="cv-section-title">PROFESSIONAL SUMMARY</h2>
+          <p class="cv-text">
+            AI/ML engineering student pursuing B.Tech in CSE (AI &amp; ML) at Ideal Institute of Technology (CGPA: 8.2/10, Graduating 2027) with hands-on experience in Python, data analysis, machine learning workflows, and full-stack development. Demonstrates solid practical engineering exposure through technical internships, predictive analytics platforms, and modern generative AI web applications.
+          </p>
+        </div>
+
+        <!-- Education -->
+        <div class="cv-section">
+          <h2 class="cv-section-title">EDUCATION</h2>
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <span class="cv-item-title">B.Tech, CSE (AI &amp; ML)</span>
+              <span class="cv-item-date">2023 – 2027</span>
+            </div>
+            <div class="cv-item-sub">Ideal Institute of Technology &bull; Kakinada, Andhra Pradesh</div>
+            <div class="cv-item-meta">CGPA: 8.2 / 10</div>
+          </div>
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <span class="cv-item-title">MPC (Mathematics, Physics, Chemistry)</span>
+              <span class="cv-item-date">2021 – 2023</span>
+            </div>
+            <div class="cv-item-sub">Pragati Junior College &bull; Kakinada, Andhra Pradesh</div>
+            <div class="cv-item-meta">Score: 8 / 10</div>
+          </div>
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <span class="cv-item-title">10th Class (SSC)</span>
+              <span class="cv-item-date">Completed</span>
+            </div>
+            <div class="cv-item-sub">Municipal Corporation High School &bull; Kakinada, Andhra Pradesh</div>
+            <div class="cv-item-meta">Percentage: 88%</div>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="cv-section">
+          <h2 class="cv-section-title">PRACTICAL INTERNSHIPS</h2>
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <span class="cv-item-title">AI Software Trainee Intern</span>
+              <span class="cv-item-date">May 2026 – Jul 2026 (On-site)</span>
+            </div>
+            <div class="cv-item-sub">Krify Software Technologies Pvt. Ltd.</div>
+            <ul class="cv-bullets">
+              <li>Conducted in-depth Customer Behaviour Analysis and customer segmentation insights.</li>
+              <li>Performed end-to-end data cleaning, preprocessing, and exploratory data analysis (EDA).</li>
+              <li>Employed Python, Pandas, NumPy, Matplotlib, and Seaborn for automated reporting and visual analysis.</li>
+            </ul>
+          </div>
+
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <span class="cv-item-title">AI/ML Intern</span>
+              <span class="cv-item-date">Jun 2025 – Jul 2025 (Online)</span>
+            </div>
+            <div class="cv-item-sub">Google AI-ML Virtual Internship</div>
+            <ul class="cv-bullets">
+              <li>Completed hands-on AI/ML laboratory exercises covering modern machine learning workflows.</li>
+              <li>Built and trained supervised learning models; evaluated performance with accuracy, precision, and recall metrics.</li>
+            </ul>
+          </div>
+
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <span class="cv-item-title">Java Full Stack Developer Virtual Intern</span>
+              <span class="cv-item-date">Oct 2024 – Dec 2024 (Online)</span>
+            </div>
+            <div class="cv-item-sub">EduSkills Academy (AICTE)</div>
+            <ul class="cv-bullets">
+              <li>Completed a 10-week virtual internship covering Java full-stack software fundamentals.</li>
+              <li>Engineered interactive frontend components, structured backend services, and SQL database integration.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="cv-section">
+          <h2 class="cv-section-title">FEATURED PROJECTS</h2>
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <span class="cv-item-title">Customer Behaviour Analytics</span>
+              <span class="cv-item-date">Python, Streamlit, Pandas, Scikit-learn, Plotly, SQLite</span>
+            </div>
+            <p class="cv-text">
+              An interactive customer analytics platform combining segmentation, churn prediction, revenue analysis, and behavioural insights. Integrated machine learning models for customer engagement analysis, KPI reports, and interactive dashboards.
+            </p>
+          </div>
+
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <span class="cv-item-title">AI Nutrition Assistant</span>
+              <span class="cv-item-date">MERN Stack, OpenAI API</span>
+            </div>
+            <p class="cv-text">
+              An AI-powered full-stack nutrition tracking application with React frontend, Node.js and Express backend, MongoDB, JWT authentication, role-based access, Bcrypt password hashing, food database, meal planning, BMI and calorie calculations, progress tracking, and an AI nutrition chatbot with OpenAI API integration and chat history.
+            </p>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="cv-section">
+          <h2 class="cv-section-title">TECHNICAL SKILLS</h2>
+          <div class="cv-skills-block">
+            <div><strong>Programming Languages:</strong> C, Java, Python, SQL</div>
+            <div><strong>Web Technologies:</strong> HTML, CSS</div>
+            <div><strong>AI / Data:</strong> Machine Learning, Data Preprocessing, EDA, Pandas, NumPy, Scikit-learn, Data Visualization</div>
+            <div><strong>Tools:</strong> VS Code, Streamlit, Plotly, SQLite</div>
+            <div><strong>Soft Skills:</strong> Problem Solving, Team Collaboration</div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="cv-section">
+          <h2 class="cv-section-title">CERTIFICATIONS</h2>
+          <ul class="cv-bullets">
+            <li>AI Literacy — IBM SkillsBuild</li>
+            <li>Introduction to Modern AI — Cisco</li>
+            <li>Red Hat OpenShift Applications (DO101-RHA)</li>
+            <li>Python Full Stack Internship Certificate</li>
+            <li>AI &amp; ML Internship Certificate — SmartBridge &amp; APSCHE</li>
+          </ul>
+        </div>
+
+        <!-- Achievements & Activities -->
+        <div class="cv-section">
+          <h2 class="cv-section-title">ACHIEVEMENTS &amp; ACTIVITIES</h2>
+          <ul class="cv-bullets">
+            <li>Robo Race competitions at JNTUK and other technical competitions</li>
+            <li>Hackathons focused on innovation and problem-solving</li>
+            <li>Chess and technical/strategic competitions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="main.js"></script>
+</body>
+</html>
